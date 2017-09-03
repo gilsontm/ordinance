@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="css/tether.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+    <link rel="icon" type="image/png" href="images/ifc-icon.png"/>
+    <title>Portarias</title>
+</head>
+<body class="h-100">
+    <div class="container-fluid m-0 p-0 row">
+        <!-- SIDEBAR MENU -->
+        <div class="col-2 pb-5 full-height bg-light">
+            <img src="images/ifc-logo.png" class="img-fluid my-3 mx-auto d-block">
+
+            <button class="btn btn-block btn-success mt-4 dropdown-toggle" type="button" data-toggle="collapse" data-target="#user-menu" aria-expanded="false" aria-controls="user-menu">
+                Olá, Usuário
+            </button>
+            <div class="collapse" id="user-menu">
+                <nav class="nav flex-column mt-3">
+                    <a href="#" class="nav-link"> Perfil de usuário</a>
+                    <a href="#" class="nav-link"> Painel de administrador </a>
+                    <a href="#" class="nav-link"> Sair </a>
+                </nav>
+            </div>
+
+            <hr>
+            <nav class="nav flex-column">
+                <a href="#" class="nav-link"> Página inicial </a>
+                <a href="registerOrdinance.html" class="nav-link"> Cadastrar uma portaria </a>
+            </nav>
+        </div>
+        <!-- END SIDEBAR MENU -->
+        <div class="col-10">
+            <!-- HEADER -->
+            <div class="container-fluid pt-2 row mt-3">
+                <div class="col-8">
+                    <h3> Cadastrar nova portaria </h3>
+                </div>
+                <div class="col-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Pesquise uma portaria...">
+                              <span class="input-group-btn">
+                                <button class="btn btn-success" type="button">Pesquisar</button>
+                              </span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!-- END HEADER -->
+
+            <!-- CONTENT -->
+            <div class="container-fluid my-5">
+                <div class="mx-5 p-4 bg-light">
+                    <form>
+                        <div class="form-row align-items-center">
+                            <div class="form-group col">
+                                <label for="number" class="form-control-label"> Portaria Nº </label>
+                                <input type="text" class="form-control" name="number" id="number" placeholder="Número da portaria">
+                            </div>
+                            <div class="form-group col">
+                                <label for="duration" class="form-control-label"> Data de vencimento </label>
+                                <input type="text" class="form-control" name="duration" id="duration" placeholder="DD/MM/AAAA">
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center">
+                            <div class="form-group col">
+                                <label for="duration" class="form-control-label"> Status </label>
+                                <br>
+                                <select class="custom-select" name="status" id="status">
+                                    <option selected>Selecione o status da portaria</option>
+                                    <option value="1">Em vigor</option>
+                                    <option value="2">Expirada</option>
+                                    <option value="3">Cancelada</option>
+                                </select>
+                            </div>
+                            <div class="form-group col">
+                                <label for="file" class="form-control-label"> Arquivo PDF </label>
+                                <input type="file" class="form-control-file" name="file" id="file">
+                            </div>
+                        </div>
+
+                        <div class="form-row align-items-center mt-4">
+                            <div class="form-group col-6" id="name_input_form">
+                                <h5 class="align-items-center"> Envolvidos  <button class="btn btn-sm btn-danger float-right" id="add_name_input"> Adicionar envolvido </button> </h5>
+                                <hr>
+                                <div class="input-group name_input my-2" id="name_input_1">
+                                    <input type="text" class="form-control" name="involved_name_1" placeholder="Nome do envolvido"/>
+                                    <span class="input-group-addon">
+                                        <button type="button" class="close close_name_input" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success float-right px-5"> Cadastrar </button>
+
+                    </form>
+                </div>
+            </div>
+            <!-- END CONTENT -->
+        </div>
+
+
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

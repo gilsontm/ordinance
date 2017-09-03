@@ -1,0 +1,29 @@
+html {
+    font-size: 1.1vw;
+}
+
+@include media-breakpoint-up(sm) {
+    html {
+        font-size: 1vw;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    html {
+        font-size: 3vw;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    html {
+        font-size: 5vw;
+    }
+}
+
+.full-height {
+    min-height: 100vh;
+}
+
+
+
+
